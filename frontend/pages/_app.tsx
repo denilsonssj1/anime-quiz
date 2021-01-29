@@ -1,25 +1,29 @@
 import type { AppProps } from 'next/app';
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import db from '../db.json';
 
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    /* New styles */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    // Deixa branco no começo
+    color: ${({ theme }) => theme.colors.contrastText};
   }
 `
 
-const theme = {
-  colors: {
-    primary: '#0070f3',
-  },
-}
+const theme = db.theme;
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
