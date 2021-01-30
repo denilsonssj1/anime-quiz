@@ -1,6 +1,6 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
-// eslint-disable-next-line no-use-before-define
 import React, { useState, FormEvent } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
@@ -28,7 +28,6 @@ export default function Home() {
   const router = useRouter();
   const [name, setName] = useState('');
 
-  // eslint-disable-next-line no-unused-vars
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     router.push(`/quiz?name=${name}`);
