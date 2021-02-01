@@ -11,4 +11,4 @@ Projeto desenvolvido na Imersão React da Alura.
 * [Typescript](https://www.typescriptlang.org/)
 
 ## Demo
-A versão demo do projeto pode ser encontrado neste [link](https://vercel.com/denilsonssj/anime-quiz/4tiw6id32)
+A versão demo do projeto pode ser encontrado neste [link](https://anime-quiz-ivory.vercel.app/)
